@@ -62,7 +62,7 @@ with col2:
     wdrr_line_reject = st.selectbox("WDRR Line Rejection (Total credit -1)", options=[0, 1], key="wdrr_line_reject")
 
     # Total credit for Calculator 2 is fixed at 17
-    base_total_credit_2 = 17
+    base_total_credit_2 = 16
     obtained_credit_2 = (
         mdrc + long_short_structure + svp_reject + bml_reject + mb_reject +
         db + wdrc_mid + drc_reject + limiter_reject + drib_reject +

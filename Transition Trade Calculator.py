@@ -61,7 +61,7 @@ with col2:
     ddr_line_reject = st.selectbox("DDR Line Rejection (Total credit -1)", options=[0, 1], key="ddr_line_reject")
     wdrr_line_reject = st.selectbox("WDRR Line Rejection (Total credit -1)", options=[0, 1], key="wdrr_line_reject")
     half_reject = st.selectbox("0.5 Reject (Total credit -1)", options=[0, 1], key="half_reject")
-    wdr_reject = st.selectbox("WDR reject (Total credit -1)", options=[0, 1], key="wdr_reject")  # NEW INPUT
+    wdr_reject = st.selectbox("WDR Reject (Total credit -1)", options=[0, 1], key="wdr_reject")  # NEW INPUT
 
     obtained_credit_2 = (
         mdrc + long_short + svp_reject + bml_reject + mb_reject +

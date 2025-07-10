@@ -60,13 +60,16 @@ with col2:
     m7box_reject = st.selectbox("M7Box Reject (Total credit -1)", options=[0, 1], key="m7box_reject")
     ddr_line_reject = st.selectbox("DDR Line Rejection (Total credit -1)", options=[0, 1], key="ddr_line_reject")
     wdrr_line_reject = st.selectbox("WDRR Line Rejection (Total credit -1)", options=[0, 1], key="wdrr_line_reject")
-    half_reject = st.selectbox("0.5 Reject (Total credit -1)", options=[0, 1], key="half_reject")  # NEW INPUT
+    half_reject = st.selectbox("0.5 Reject (Total credit -1)", options=[0, 1], key="half_reject")
+    wdr_reject = st.selectbox("WDR reject (Total credit -1)", options=[0, 1], key="wdr_reject")  # NEW INPUT
 
-    obtained_credit_2 = (mdrc + long_short + svp_reject + bml_reject + mb_reject +
-                         db + wdrc_mid + drc_reject + limiter_reject +
-                         drib_reject + m7box_reject + ddr_line_reject + wdrr_line_reject + half_reject)
+    obtained_credit_2 = (
+        mdrc + long_short + svp_reject + bml_reject + mb_reject +
+        db + wdrc_mid + drc_reject + limiter_reject + drib_reject +
+        m7box_reject + ddr_line_reject + wdrr_line_reject + half_reject + wdr_reject
+    )
 
-    total_possible_credit_2 = 17  # Updated total with new input
+    total_possible_credit_2 = 18  # Updated for new input
 
     percentage_2 = (obtained_credit_2 / total_possible_credit_2) * 100 if total_possible_credit_2 > 0 else 0
 
